@@ -19,6 +19,9 @@ module load hpcx/2.17.1
 # open file limit
 ulimit -n 65536 1048576
 
+# virtualenv
+source .env/bin/activate
+
 # nccl2
 export NCCL_HOME="/usr/local/nccl2"
 
