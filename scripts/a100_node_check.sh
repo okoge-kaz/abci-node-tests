@@ -1,5 +1,5 @@
 #!/bin/bash
-#$ -l rt_AF=60
+#$ -l rt_AF=4
 #$ -l h_rt=00:30:00
 #$ -j y
 #$ -o outputs/a100/
@@ -7,10 +7,13 @@
 
 # module load
 source /etc/profile.d/modules.sh
-module load cuda/11.8/11.8.0
-module load cudnn/8.9/8.9.2
-module load nccl/2.16/2.16.2-1
+module use /groups/gag51395/modules/modulefiles
+
+module load cuda/12.1/12.1.1
+module load cudnn/cuda-12.1/9.0.0
+module load nccl/2.17/2.17.1-1
 module load hpcx/2.12
+module load gcc/11.4.0
 
 source .env/bin/activate
 
